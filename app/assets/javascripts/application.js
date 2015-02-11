@@ -18,3 +18,10 @@
 //= require markdown
 //= require to-markdown
 //= require_tree .
+
+$(document).ready(function() {
+  // convert any markdown sections to html
+  $('.markdown').each( function() {
+    $(this).html(markdown.toHTML($(this).html()));
+  });
+});
