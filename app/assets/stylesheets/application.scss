@@ -12,11 +12,6 @@
  *
  *= require_tree .
  *= require_self
+ //= require foundation_and_overrides
+
  */
-
-// import bootstrap stuff
-@import "bootstrap-sprockets";
-@import "bootstrap";
-
-// import bootstrap-markdown so we can use markdown in forms
-@import "bootstrap-markdown.min";

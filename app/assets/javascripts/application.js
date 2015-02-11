@@ -12,9 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require foundation
 //= require turbolinks
-//= require bootstrap-sprockets
-//= require bootstrap-markdown
 //= require markdown
 //= require to-markdown
 //= require_tree .
@@ -25,3 +24,5 @@ $(document).ready(function() {
     $(this).html(markdown.toHTML($(this).html()));
   });
 });
+
+$(function(){ $(document).foundation(); });
