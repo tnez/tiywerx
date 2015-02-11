@@ -32,11 +32,12 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-# use uikit for styling
-gem "uikit-sass-rails"
-
 # use haml-rails because I like haml better than erb
 gem "haml-rails"
+
+# use bootstrap
+gem 'bootstrap-sass'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
