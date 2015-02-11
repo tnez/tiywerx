@@ -1,0 +1,13 @@
+%h2 New Assignment
+
+= form_for @assignment do |f|
+  .form-group
+    = f.text_field :title, class:"form-control", placeholder:"Title..."
+  .form-group
+    = f.text_area :description, class:"form-control", rows:2, placeholder: "Description..."
+  .form-group
+    = f.text_area :content, class:"form-control", rows:20, data:{provide:'markdown'}, placeholder:"Content..."
+  .form-group
+    = link_to 'Cancel', assignments_path, class:"btn btn-default"
+    = f.submit 'Create Assignment', class:"btn btn-primary"
+  

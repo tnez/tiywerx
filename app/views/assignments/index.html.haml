@@ -5,3 +5,7 @@
     = assignment.description
     |
     = link_to 'view', assignment_path(assignment)
+    |
+    = link_to 'edit', edit_assignment_path(assignment)
+    |
+    = link_to 'delete', assignment_path(assignment), method: :delete
