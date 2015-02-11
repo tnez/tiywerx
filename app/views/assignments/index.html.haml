@@ -1,0 +1,7 @@
+- @assignments.each do |assignment|
+  .assignment.listing
+    %h2
+      = assignment.title
+    = assignment.description
+    |
+    = link_to 'view', assignment_path(assignment)
