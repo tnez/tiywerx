@@ -14,19 +14,45 @@
 
   <body>
 
-    <div class="flash">
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
-    </div>
+    <nav class="top-bar" data-topbar role="navigation" >
+      <ul class="title-area">
+        <li class="name">
+          <h1><a href="/">__TIYWERX__</a></h1>
+        </li>
+        <!-- The little menu that takes over when screen gets too small -->
+        <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+      </ul>
+      <section class="top-bar-section">
+        <!-- login section -->
+        <ul class="right">
+          <% if user_signed_in? %>
+            <li>
+              <%= link_to 'logout', destroy_user_session_path, :method => :delete %>
+            </li>
+          <% else  %>
+            <li>
+              <%= link_to 'sign-in', new_user_session_path %>
+            </li>
+            <li>
+              <%= link_to 'register', new_user_registration_path %>
+            </li>
+          <% end %>
+        </ul>
+      </section>
+    </nav>
 
-    <div class="login-nav">
-      <% if user_signed_in? %>
-        <%= link_to 'logout', destroy_user_session_path, :method => :delete %>
-      <% else %>
-        <%= link_to 'login', new_user_session_path %>
-        |
-        <%= link_to 'register', new_user_registration_path %>
-      <% end %>
+    <% if notice %>
+      <div data-alert class="alert-box success">
+        <%= notice %>
+        <a href="#" class="close">&times;</a>
+      </div>
+    <% end %>
+    <% if alert %>
+      <div data-alert class="alert-box alert">
+        <%= alert %>
+        <a href="#" class="close">&times;</a>
+      </div>
+    <% end %>
       
     <%= yield %>
 
