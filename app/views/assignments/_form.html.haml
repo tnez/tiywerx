@@ -1,13 +1,14 @@
-%h2 New Assignment
-
 = form_for @assignment do |f|
-  .form-group
-    = f.text_field :title, class:"form-control", placeholder:"Title..."
-  .form-group
-    = f.text_area :description, class:"form-control", rows:2, placeholder: "Description..."
-  .form-group
-    = f.text_area :content, class:"form-control", rows:20, data:{provide:'markdown'}, placeholder:"Content..."
-  .form-group
-    = link_to 'Cancel', assignments_path, class:"btn btn-default"
-    = f.submit 'Create Assignment', class:"btn btn-primary"
+  %fieldset
+    %legend Information
+    = f.label :title
+    = f.text_field :title, placeholder:"Title..."
+    = f.label :description
+    = f.text_area :description, rows:2, placeholder: "Description..."
+  %fieldset
+    %legend Content
+    = f.text_area :content, rows:20, data:{provide:'markdown'}, placeholder:"Content..."
+  .row.clearfix
+    = f.submit 'Save', class:"button radius right"
+    = link_to 'Cancel', assignments_path, class:"button radius right"
   

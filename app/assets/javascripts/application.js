@@ -14,14 +14,15 @@
 //= require jquery_ujs
 //= require foundation
 //= require turbolinks
-//= require markdown
-//= require to-markdown
+//= require marked/marked.min
 //= require_tree .
+
+$(document).foundation();
 
 $(document).ready(function() {
   // convert any markdown sections to html
   $('.markdown').each( function() {
-    $(this).html(markdown.toHTML($(this).html()));
+    $(this).html(marked($(this).html()));
   });
 });
 
