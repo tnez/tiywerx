@@ -38,6 +38,9 @@ gem "haml-rails"
 # use devise to handle user authentication
 gem "devise"
 
+# use paperclip to attach images, etc.
+gem "paperclip"
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
