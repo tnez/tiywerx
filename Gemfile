@@ -35,6 +35,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # use haml-rails because I like haml better than erb
 gem "haml-rails"
 
+# use devise to handle user authentication
+gem "devise"
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
