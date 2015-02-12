@@ -66,6 +66,8 @@ GEM
       responders
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
+    enumerize (0.9.0)
+      activesupport (>= 3.2)
     erubis (2.7.0)
     execjs (2.3.0)
     globalid (0.3.2)
@@ -109,6 +111,8 @@ GEM
       activesupport (>= 3.0.0)
       cocaine (~> 0.5.3)
       mime-types
+    pundit (0.3.0)
+      activesupport (>= 3.0.0)
     rack (1.6.0)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -190,10 +194,12 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.1.0)
   devise
+  enumerize
   haml-rails
   jbuilder (~> 2.0)
   jquery-rails
   paperclip
+  pundit
   rails (= 4.2.0)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)

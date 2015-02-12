@@ -38,6 +38,12 @@ gem "haml-rails"
 # use devise to handle user authentication
 gem "devise"
 
+# use pundit for role based authorization
+gem "pundit"
+
+# user enumerize for all my enumerization needs
+gem "enumerize"
+
 # use paperclip to attach images, etc.
 gem "paperclip"
 
