@@ -1,0 +1,12 @@
+%table
+  %thead
+    %tr
+      %th Title
+      %th Description
+  %tbody
+    - @assignments.each do |assignment|
+      %tr
+        %td
+          = assignment.title
+        %td
+          = assignment.description
