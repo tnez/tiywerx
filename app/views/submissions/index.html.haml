@@ -1,0 +1,22 @@
+%h2
+  = "Submisions for #{@assignment.title}"
+
+%table
+  %thead
+    %tr
+      %th User
+      %th Created
+      %th Last Modified
+      %th Grade
+  %tbody
+    - @submissions.each do |submission|
+      %tr
+        %td
+          = submission.user.email
+        %td
+          = submission.created_at
+        %td
+          = submission.updated_at
+        %td
+          A-OK
+

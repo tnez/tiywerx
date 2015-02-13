@@ -1,0 +1,6 @@
+= form_for [@assignment,@submission] do |f|
+  .row
+    = f.text_area :content, rows:20, placeholder:"Content..."
+  .row.clearfix
+    = f.submit 'Save', class:"button radius right"
+    = link_to 'Cancel', assignment_path(@submission.assignment), class:"button radius right"
