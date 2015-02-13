@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150213201715) do
+ActiveRecord::Schema.define(version: 20150213213201) do
 
   create_table "assignments", force: :cascade do |t|
     t.string   "title"
@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 20150213201715) do
     t.integer  "course_id"
   end
 
-  create_table "course", force: :cascade do |t|
+  create_table "courses", force: :cascade do |t|
     t.string "name"
     t.text   "description"
   end
@@ -42,8 +42,9 @@ ActiveRecord::Schema.define(version: 20150213201715) do
 
   create_table "locations", force: :cascade do |t|
     t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.text     "description"
   end
 
   create_table "submissions", force: :cascade do |t|
@@ -67,7 +68,6 @@ ActiveRecord::Schema.define(version: 20150213201715) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "avatar"
     t.string   "handle"
     t.text     "blurb"
     t.string   "avatar_file_name"

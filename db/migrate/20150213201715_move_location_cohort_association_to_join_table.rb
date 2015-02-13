@@ -7,7 +7,7 @@ class MoveLocationCohortAssociationToJoinTable < ActiveRecord::Migration
     add_column :cohorts, :course_id, :integer
 
     # create a course table
-    create_table :course do |t|
+    create_table :courses do |t|
       t.string :name
       t.text :description
     end
