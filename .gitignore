@@ -18,3 +18,6 @@
 
 # Ignore bower_components
 /vendor/assets/bower_components/
+
+# Ignore avatar files and such
+/public/system/
