@@ -1,13 +1,20 @@
 = form_for @user, :url => profile_path, :html => { multipart: true } do |f|
-  .row
-    = f.label :avatar
-    = f.file_field :avatar
-  .row
-    = f.label :username
-    = f.text_field :handle
-  .row
-    = f.label :'about me'
-    = f.text_area :blurb, rows:2
+  %fieldset
+    %legend Personal Information
+    .row
+      = f.label :avatar
+      = f.file_field :avatar
+    .row
+      = f.label :username
+      = f.text_field :handle
+    .row
+      = f.label :'about me'
+      = f.text_area :blurb, rows:2
+  %fieldset
+    %legend Registration Information
+    .row
+      = f.label :cohort
+      = f.collection_check_boxes :cohort_ids, Cohort.all, :id, :name
   .row.clearfix
     = f.submit 'Save', class:"button round right"
     = link_to 'Cancel', profile_path(@user), class:"button round right"
