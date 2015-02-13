@@ -1,16 +1,15 @@
 class MoveLocationCohortAssociationToJoinTable < ActiveRecord::Migration
   def change
-    # drop the location_id column we previously created because it
-    # means that a cohort can only have one location when we actually
-    # want it to belong to many locations
-    remove_column :cohorts, :location_id, :integer
+    # add a course id to the cohort table... a cohort is essentially a
+    # specific course at a specific location. It is modeled by a join
+    # table between location and course.
+    remove_column :cohorts, :name, :string
+    add_column :cohorts, :course_id, :integer
 
-    # create the join table associating locations and cohorts
-    create_table :location_cohorts do |t|
-      t.integer :location_id
-      t.integer :cohort_id
-
-      t.timestamps null: false
+    # create a course table
+    create_table :course do |t|
+      t.string :name
+      t.text :description
     end
   end
 end

@@ -22,9 +22,15 @@ ActiveRecord::Schema.define(version: 20150213201715) do
   end
 
   create_table "cohorts", force: :cascade do |t|
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "location_id"
+    t.integer  "course_id"
+  end
+
+  create_table "course", force: :cascade do |t|
+    t.string "name"
+    t.text   "description"
   end
 
   create_table "enrollments", force: :cascade do |t|
@@ -32,13 +38,6 @@ ActiveRecord::Schema.define(version: 20150213201715) do
     t.integer  "cohort_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "location_cohorts", force: :cascade do |t|
-    t.integer  "location_id"
-    t.integer  "cohort_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
   end
 
   create_table "locations", force: :cascade do |t|
