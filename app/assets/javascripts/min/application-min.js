@@ -1,1 +1,0 @@
-$(document).foundation(),$(document).ready(function(){$(".markdown").each(function(){$(this).html(marked($(this).html()))})}),$(function(){$(document).foundation()});
