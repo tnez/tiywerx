@@ -1,0 +1,24 @@
+.image-header
+  .row
+    .small-10.offset-2.colums
+      %h2 Something
+      %ul
+        %li one
+        %li two
+        %li thre
+        
+  
+
+.course-list
+  %h2 Explore our classes
+  - @courses.each do |course|
+    .row.course-list-item
+      .course-badge.small-2.columns
+        = image_tag course.badge
+      .course-info.small-6.columns
+        %h3= course.name
+        %p= course.description
+      .course-show-button.small-4.columns
+        -# TODO: this links to nowhere... should link to course show
+        -# page
+        = link_to "Learn More", '#', :class => "btn radius"

@@ -1,6 +1,6 @@
-name,description
-"Web Design","Learn Web Design from the ground up, including ideation, UI and UX design, front-end code and a whole lot more. At the end of class you'll have the skills to understand and add value in almost any digital design role."
-"Python Engineering","Learn to analyze and publish data using Python and machine learning. At the end of the class you’ll make magic happen with real-world data sets and you'll know how to build web apps to show off your wizardry."
-"Mobile Engineering","Learn iOS app development using Xcode 5 and a whole lot of Objective-C. At the end of the class you’ll have the skills to create beautiful, fully functional iOS apps and the foundation to pursue building Mac apps."
-"Rails Engineering","Learn Ruby on Rails, one of the most popular server-side frameworks in the world. At the end of class you’ll know how to build fast, production-quality full-stack apps."
-"Front End Engineering","Learn Front End Engineering using HTML, CSS and JavaScript and basic server-side tech. At the end of the class you’ll have the skills to create beautiful, fully functional websites and web applications."
+name,description,badge
+"Web Design","Learn Web Design from the ground up, including ideation, UI and UX design, front-end code and a whole lot more. At the end of class you'll have the skills to understand and add value in almost any digital design role.","web-design-logo.png"
+"Python Engineering","Learn to analyze and publish data using Python and machine learning. At the end of the class you’ll make magic happen with real-world data sets and you'll know how to build web apps to show off your wizardry.","python-engineering-logo.png"
+"Mobile Engineering","Learn iOS app development using Xcode 5 and a whole lot of Objective-C. At the end of the class you’ll have the skills to create beautiful, fully functional iOS apps and the foundation to pursue building Mac apps.","mobile-engineering-logo.png"
+"Rails Engineering","Learn Ruby on Rails, one of the most popular server-side frameworks in the world. At the end of class you’ll know how to build fast, production-quality full-stack apps.","rails-engineering-logo.png"
+"Front End Engineering","Learn Front End Engineering using HTML, CSS and JavaScript and basic server-side tech. At the end of the class you’ll have the skills to create beautiful, fully functional websites and web applications.","front-end-engineering-logo.png"

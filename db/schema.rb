@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150213213201) do
+ActiveRecord::Schema.define(version: 20150215134619) do
 
   create_table "assignments", force: :cascade do |t|
     t.string   "title"
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 20150213213201) do
   create_table "courses", force: :cascade do |t|
     t.string "name"
     t.text   "description"
+    t.string "badge"
   end
 
   create_table "enrollments", force: :cascade do |t|
@@ -75,6 +76,7 @@ ActiveRecord::Schema.define(version: 20150213213201) do
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
     t.string   "role"
+    t.integer  "location_id"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
