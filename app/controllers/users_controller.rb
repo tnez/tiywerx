@@ -6,6 +6,7 @@ class UsersController < ApplicationController
 
   def edit
     @user = User.find(params[:id])
+    @courses = Course.all
   end
 
   def update
@@ -24,6 +25,8 @@ class UsersController < ApplicationController
   def profile_params
     params.require(:user).permit(:handle,
                                  :blurb,
-                                 :avatar)
+                                 :avatar,
+                                 :location_id,
+                                 :cohort_ids => [])
   end
 end

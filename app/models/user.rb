@@ -10,6 +10,8 @@ class User < ActiveRecord::Base
   # enumerate roles
   extend Enumerize
   enumerize :role, in: [:student,:instructor,:director]
+  # has one location
+  belongs_to :location
   # has many enrollments
   has_many :enrollments
   has_many :cohorts, through: :enrollments
