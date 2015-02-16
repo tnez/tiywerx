@@ -1,33 +1,31 @@
 = form_for @user, :url => profile_path, :html => { multipart: true } do |f|
-  %fieldset
-    %legend Personal Information
-    .row
-      .avatar.round
-        = image_tag @user.avatar.url(:thumb), :class => "round"
-      = f.file_field :avatar
-    .row
-      = f.label :username
-      = f.text_field :handle
-    .row
-      = f.label :'about me'
-      = f.text_area :blurb, rows:2
-  %fieldset
-    %legend Enrollment
-    .row
-      = f.label :campus
-      = f.collection_select :location_id, Location.all, :id, :name, :selected => @user.location_id
-    .row
-      = f.label :cohort
-      = f.collection_check_boxes :cohort_ids, Cohort.all, :id, :location_and_name, :checked => @user.cohort_ids
+  .row
+    %fieldset
+      %legend Personal Information
+      .row
+        .avatar.round
+          = image_tag @user.avatar.url(:thumb), :class => "round"
+        = f.file_field :avatar
+      .row
+        = f.label :username
+        = f.text_field :handle
+      .row
+        = f.label :'about me'
+        = f.text_area :blurb, rows:2
+  .row
+    %fieldset
+      %legend Enrollment
+      .row
+        = f.label :campus
+        = f.collection_select :location_id, Location.all, :id, :name, :selected => @user.location_id
+      .row  
+        %ul.medium-block-grid-3.large-block-grid-5
+          - @courses.each do |course|
+            %li
+              .course-item{:data => {:id => course.id, :locations => course.location_ids} }
+                = course.name
+                %br
+                = image_tag course.badge
   .row.clearfix
     = f.submit 'Save', class:"button round right"
     = link_to 'Cancel', profile_path(@user), class:"button round right"
-
-  .row
-    %ul.medium-block-grid-5.small-block-grid-1
-      - @courses.each do |course|
-        %li
-          .course-item
-            = image_tag course.badge
-            %br
-            = course.name            
