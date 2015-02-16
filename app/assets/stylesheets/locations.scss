@@ -1,3 +1,46 @@
 // Place all the styles related to the locations controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+h2 {
+  color: #CCC;
+  font-size: 3.5em;
+  padding-top: 60px;
+  font-family: times;
+  }
+
+.location-list-item {
+  padding: 30px;
+  border-top: 2px solid #EEE;
+  color: #999;
+  }
+
+.location-info {
+
+  h3 {
+    color: #666;
+    font-size: 2em;
+    font-family: times;
+    }
+
+  p {
+    color: #999;
+    }
+
+
+  .location-item-course-info {
+    color: #666;
+    margin: auto;
+    font-size: 1em;
+    img {
+      width: 30px;
+      height: 30px;
+      }
+    }
+  }
+
+.location-show-button {
+  font-size: 1.25em;
+  margin-top: 10px;
+  }
+  

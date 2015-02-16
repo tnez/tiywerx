@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
   resources :courses
+  resources :locations
   resources :assignments do
     resources :submissions, only: [:index, :new, :create]
   end

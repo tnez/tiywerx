@@ -2,19 +2,31 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.image-header {
-  width: 100%;
-  height: 35%;
-  background: url('http://placehold.it/350x150') center center no-repeat;
-  background-size: cover;
-  box-shadow: 1px 1px 5px grey;
-  color: #DDD;
+   
+h2 {
+  color: #CCC;
+  font-size: 3.5em;
+  padding-top: 60px;
+  font-family: times;
+  font-style: italic;
+  }
 
-  h2 {
-    color: #DDD;
+.course-list-item {
+  padding: 30px;
+  border-top: 2px solid #EEE;
+  color: #999;
+  h3 {
+    color: #666;
+    font-size: 2em;
+    font-family: times;
     }
-}  
-                                     
+  p {
+    color: #999;
+    }
+  .course-show-button {
+    margin-top: 10px;
+    }
+  } 
+                                 
 .course-badge > img {
-    border-radius: 75px;
 }

@@ -1,0 +1,18 @@
+.row
+  %h2 How about 'dem spawtz...
+
+.location-list
+  - @locations.each do |location|
+    .row.location-list-item
+      .location-info.large-9.columns
+        %h3= location.name
+        %p= location.description
+        %ul.large-block-grid-3.medium-block-grid-2.small-block-grid-1
+          - location.courses.each do |course|
+            %li.location-item-course-info
+              = image_tag course.badge
+              = course.name
+      .location-show-button.large-3.columns.center
+        -# TODO: this links to nowhere... should link to location show
+        -# page
+        = link_to "Learn More", '#', :class => "button radius"

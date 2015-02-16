@@ -1,24 +1,15 @@
-.image-header
-  .row
-    .small-10.offset-2.colums
-      %h2 Something
-      %ul
-        %li one
-        %li two
-        %li thre
-        
-  
-
 .course-list
-  %h2 Explore our classes
+  .row
+    .small-12.columns
+      %h2 Learn me sumtin' baus-saus...
   - @courses.each do |course|
     .row.course-list-item
-      .course-badge.small-2.columns
+      .course-badge.large-2.columns
         = image_tag course.badge
-      .course-info.small-6.columns
+      .course-info.large-7.columns
         %h3= course.name
         %p= course.description
-      .course-show-button.small-4.columns
+      .course-show-button.large-3.columns
         -# TODO: this links to nowhere... should link to course show
         -# page
-        = link_to "Learn More", '#', :class => "btn radius"
+        = link_to "Learn More", '#', :class => "button radius"
